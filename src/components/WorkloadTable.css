@@ -1,0 +1,122 @@
+.workload-header {
+  align-items: flex-start;
+}
+
+.workload-header__meta {
+  margin-top: var(--space-2);
+}
+
+.workload-capacity {
+  flex: 0 1 360px;
+  min-width: 280px;
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--color-border-soft);
+  border-radius: var(--radius-md);
+  background: var(--color-surface-muted);
+}
+
+.workload-capacity__metrics {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: var(--space-1) var(--space-4);
+}
+
+.workload-capacity__metric {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  font-size: var(--text-sm);
+  white-space: nowrap;
+}
+
+.workload-capacity__label {
+  color: var(--color-text-secondary);
+}
+
+.workload-capacity__value {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-text);
+  font-variant-numeric: tabular-nums;
+}
+
+.workload-capacity__value--negative {
+  color: var(--color-red-text);
+}
+
+.workload-capacity__bar {
+  margin-top: var(--space-2);
+}
+
+.member-cell {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-width: 190px;
+}
+
+.member-info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.member-name {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.member-role {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+
+.hours-cell {
+  font-variant-numeric: tabular-nums;
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+}
+
+.remaining-cell--negative {
+  color: var(--color-red-text);
+  font-weight: 700;
+}
+
+.remaining-cell--zero {
+  color: var(--color-amber-text);
+  font-weight: 600;
+}
+
+.utilization-cell {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-width: 150px;
+}
+
+.utilization-value {
+  min-width: 42px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text);
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 720px) {
+  .workload-capacity {
+    flex-basis: 100%;
+    min-width: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .utilization-cell {
+    min-width: 130px;
+  }
+
+  .member-cell {
+    min-width: 170px;
+  }
+}

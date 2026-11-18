@@ -1,0 +1,45 @@
+.task-title {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.project-tag {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: var(--radius-xs);
+  background: var(--color-border-soft);
+  color: #475569;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.task-owner {
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+}
+
+.due-date {
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.recent-tasks__count {
+  margin-left: auto;
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+}
+
+.search-field__input::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+@media (max-width: 640px) {
+  .recent-tasks__count {
+    margin-left: 0;
+    width: 100%;
+  }
+}

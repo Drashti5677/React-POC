@@ -1,0 +1,119 @@
+.summary-cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.summary-card {
+  --card-color: var(--color-accent);
+  --card-soft: var(--color-accent-soft);
+
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  width: 100%;
+  padding: var(--space-4) var(--space-5);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease,
+    transform 0.15s ease;
+}
+
+.summary-card:hover {
+  border-color: #d1d5db;
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
+
+.summary-card:active {
+  transform: translateY(0);
+}
+
+.summary-card:focus-visible {
+  outline: 2px solid transparent;
+  border-color: var(--card-color);
+  box-shadow: 0 0 0 3px var(--color-focus);
+}
+
+.summary-card--active,
+.summary-card--active:hover {
+  border-color: var(--card-color);
+  box-shadow: 0 0 0 3px var(--card-soft);
+}
+
+.summary-card--indigo {
+  --card-color: var(--color-accent);
+  --card-soft: var(--color-accent-soft);
+}
+
+.summary-card--green {
+  --card-color: var(--color-green);
+  --card-soft: var(--color-green-soft);
+}
+
+.summary-card--amber {
+  --card-color: var(--color-amber);
+  --card-soft: var(--color-amber-soft);
+}
+
+.summary-card--red {
+  --card-color: var(--color-red);
+  --card-soft: var(--color-red-soft);
+}
+
+.summary-card__icon {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: var(--card-soft);
+  color: var(--card-color);
+}
+
+.summary-card__body {
+  min-width: 0;
+}
+
+.summary-card__value {
+  display: block;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+  color: var(--color-text);
+  font-variant-numeric: tabular-nums;
+}
+
+.summary-card__label {
+  display: block;
+  margin-top: 3px;
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 1100px) {
+  .summary-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .summary-cards {
+    grid-template-columns: 1fr;
+  }
+}
